@@ -123,4 +123,26 @@ class GlobalFunctions
         } else
             echo json_encode(array("Error" => 1));
     }
+
+    function AddClients($email, $password)
+    {
+        $con = new ConnectionBd();
+
+        $conect = $con->DbConnection();
+        $query = $con->DbQuerySimples($conect, "USER", "email", `$email`);
+
+        if ($query->num_rows >= 1) {
+            while ($row = mysqli_fetch_assoc($query)) {
+
+                $guid = bin2hex(openssl_random_pseudo_bytes(16));
+                $queryForInsert = "INSERT INTO `CLIENT` (ID,ID_USER,PASSWORD)
+                VALUES ('$guid',$row[´ID´],'$password')";
+
+                $result = mysqli_query($conect, $query);
+            }
+
+            echo json_encode(array("Error" => 0));
+        } else
+            echo json_encode(array("Error" => 1));
+    }
 }
