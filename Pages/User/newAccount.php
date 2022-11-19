@@ -151,7 +151,6 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="../../js/gmaps.min.js"></script>
 	<script  src="../../js/main.js"></script>
-	<script type="module"  src="../../js/pages/index.js"></script>
     <script type="module" src="../../js/pages/newAccount.js"></script>
 
 </body>

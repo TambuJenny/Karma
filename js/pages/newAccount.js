@@ -39,10 +39,11 @@ function CadastrarUsuario() {
         data: dataJson,
         success: function(data, status) {
           var jsonData = JSON.parse(data);
-          console.log(jsonData);
+          //document.getElementById("alert").innerHTML = data;
 
           if (jsonData.code_response == "1") {
-            AlertSucces("Dados inserido com sucesso !");
+            document.getElementById("alert").innerHTML ="";
+            document.getElementById("alert").innerHTML =  AlertSucces("Dados inserido com sucesso !");
             Clear();
           } else if (jsonData.code_response == "0") {
             document.getElementById("alert").innerHTML = AlertError(

@@ -1,5 +1,4 @@
-import Navbar from "../components/Navbar.js";
-import Footer from "../components/Footer.js";
+
 
 $(document).ready(function() {
   "use strict";

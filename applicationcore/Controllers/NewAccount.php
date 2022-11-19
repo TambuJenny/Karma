@@ -1,8 +1,7 @@
 <?php
 
-include "connect.php";
-include "globalFunctions.php";
-include "components.php";
+include "../connect.php";
+include "../globalFunctions.php";
 
 extract($_POST);
 
